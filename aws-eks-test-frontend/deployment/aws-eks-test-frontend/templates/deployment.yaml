@@ -36,7 +36,7 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              {{ default 80 .Values.service.internalPort }}
+              port: {{ default 80 .Values.service.internalPort }}
           readinessProbe:
             httpGet:
               path: /

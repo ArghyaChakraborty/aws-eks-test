@@ -8,16 +8,20 @@ image:
   repository: arghya1988/aws-eks-test-backend:latest
   pullPolicy: Always
 
-imagePullSecrets: []
+imagePullSecrets: [
+  {
+    "name": "regcred"
+  }
+]
 nameOverride: ""
 fullnameOverride: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
-  create: false
+  create: true
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name:
+  name: 
 
 podSecurityContext: {}
   # fsGroup: 2000

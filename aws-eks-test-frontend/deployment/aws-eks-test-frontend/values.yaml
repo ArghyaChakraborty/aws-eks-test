@@ -8,7 +8,11 @@ image:
   repository: arghya1988/aws-eks-test-frontend:latest
   pullPolicy: Always
 
-imagePullSecrets: []
+imagePullSecrets: [
+  {
+    "name": "regcred"
+  }
+]
 nameOverride: ""
 fullnameOverride: ""
 
