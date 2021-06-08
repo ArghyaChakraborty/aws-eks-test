@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: metadata-configmap
+data:
+  config.json: |-
+{{ .Files.Get "runtime.json" | indent 4}}

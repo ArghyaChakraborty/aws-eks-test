@@ -1,0 +1,11 @@
+.example-full-width {
+  width: 100%;
+}
+
+mat-grid-tile {
+  background: white;
+}
+
+.response-div {
+  padding-top: 20px;
+}

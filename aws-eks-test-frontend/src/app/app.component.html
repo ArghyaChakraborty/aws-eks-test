@@ -1,0 +1,9 @@
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="First Name" value="" [(ngModel)]="inputName">
+</mat-form-field>
+
+<button mat-raised-button (click)="submitName()">Submit</button>
+
+<div *ngIf="responseMsg" class="response-div">{{responseMsg}}</div>
+
+<router-outlet></router-outlet>
