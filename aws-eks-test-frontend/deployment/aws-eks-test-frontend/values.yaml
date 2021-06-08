@@ -38,8 +38,8 @@ service:
   #type: ClusterIP
   #port: 80
   type: NodePort
-  externalPort: 80
-  internalPort: 80
+  externalPort: 4200
+  internalPort: 4200
   nodePort: 30002
 
 ingress:
