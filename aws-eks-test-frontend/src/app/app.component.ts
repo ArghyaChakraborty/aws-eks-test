@@ -14,7 +14,7 @@ export class AppComponent {
 
   submitName() {
     console.log("Getting backend service details");
-    this.http.get<any>('assets/runtime.json').subscribe(metadata => {
+    this.http.get<any>('/assets/runtime.json').subscribe(metadata => {
       console.log(metadata.BACKEND_SERVICE_URL);
       console.log("Submitting name: "+this.inputName+" to backend service");
       const tempUrl = metadata.BACKEND_SERVICE_URL+"?name="+this.inputName;

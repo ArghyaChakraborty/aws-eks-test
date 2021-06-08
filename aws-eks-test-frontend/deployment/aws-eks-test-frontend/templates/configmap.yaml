@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: metadata-configmap
 data:
-  config.json: |-
+  runtime.json: |-
 {{ .Files.Get "runtime.json" | indent 4}}

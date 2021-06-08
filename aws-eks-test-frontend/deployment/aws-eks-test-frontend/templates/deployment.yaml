@@ -30,7 +30,7 @@ spec:
           volumeMounts:
           - name: config-volume
             mountPath: /etc/config
-          command: [ "bash", "-c", "mv -f /etc/config/runtime.json /app/src/assets/ && ng serve --host 0.0.0.0" ]
+          command: [ "bash", "-c", "rm -f /etc/config/runtime.json && cp /etc/config/runtime.json /app/src/assets/ && ng serve --host 0.0.0.0" ]
           ports:
             - containerPort: {{ .Values.service.internalPort }}
           livenessProbe:
