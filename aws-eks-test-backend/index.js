@@ -18,7 +18,6 @@ app.get('/', (req, res) => {
     }
     res.set("Content-Type", "application/json");
     const msg = {"message": "Hello "+hello_str+" !!!"};
-    console.log(res);
     console.log(msg);
     res.send(msg);
 });
