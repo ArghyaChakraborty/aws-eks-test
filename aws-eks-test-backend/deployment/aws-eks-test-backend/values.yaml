@@ -10,7 +10,7 @@ image:
 
 imagePullSecrets: [
   {
-    "name": "regcred"
+    "name": "regcred-backend"
   }
 ]
 nameOverride: ""

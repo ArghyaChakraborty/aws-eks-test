@@ -37,10 +37,14 @@ spec:
             httpGet:
               path: /
               port: {{ default 80 .Values.service.internalPort }}
+              initialDelaySeconds: 60
+              periodSeconds: 10
           readinessProbe:
             httpGet:
               path: /
               port: {{ default 80 .Values.service.internalPort }}
+              initialDelaySeconds: 60
+              periodSeconds: 10
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:
